@@ -1,0 +1,145 @@
+🦈, [16.10.2025 18:35]
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ruriel Codex — Index</title>
+  <style>
+    /* Minimal, dark, print-friendly index layout */
+    :root{
+      --bg:#0f0f10; --card:#151516; --muted:#9aa0a6; --accent:#6bc7ff;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#0b0b0c 0%, #141416 100%);color:#ddd}
+    .wrap{max-width:1100px;margin:28px auto;padding:28px}
+    header{display:flex;align-items:center;gap:20px}
+    .logo{width:120px;height:120px;border-radius:8px;overflow:hidden;background:#111;display:flex;align-items:center;justify-content:center}
+    .logo img{width:100%;height:100%;object-fit:cover;filter:grayscale(.8) contrast(.95)}
+    h1{margin:0;font-size:28px;letter-spacing:1px}
+    p.lead{color:var(--muted);margin:6px 0 18px}
+
+    main{display:grid;grid-template-columns:330px 1fr;gap:24px}
+    nav.card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.6)}
+    nav h3{margin:0 0 12px;font-size:16px}
+    nav ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+    nav a{color:#cfd6da;text-decoration:none;padding:8px;border-radius:6px;display:block}
+    nav a.active, nav a:hover{background:#101214;color:var(--accent);box-shadow:inset 0 0 0 1px rgba(107,199,255,.04)}
+
+    section.view{background:linear-gradient(180deg, rgba(255,255,255,.02), transparent);padding:20px;border-radius:10px;min-height:420px}
+    .meta{display:flex;gap:14px;align-items:center;margin-bottom:14px}
+    .meta .tags{color:var(--muted);font-size:13px}
+
+    .panel{background:#0e0e0f;padding:14px;border-radius:8px;margin-bottom:12px}
+    .panel h4{margin:0 0 8px}
+    .panel p{color:var(--muted);margin:0}
+
+    .imagewrap{border-radius:8px;overflow:hidden;background:#0b0b0c;border:1px solid rgba(255,255,255,.02);margin-bottom:12px}
+    .imagewrap img{width:100%;display:block}
+
+    .row{display:flex;gap:12px}
+    .code{font-family:monospace;background:#0b0b0b;padding:10px;border-radius:6px;color:#bfe9ff}
+
+    footer{color:var(--muted);font-size:13px;margin-top:18px}
+
+    /* responsive */
+    @media (max-width:900px){main{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo"><img src="ruriel_image.png" alt="Ruriel Codex"></div>
+      <div>
+        <h1>Ruriel Codex — Index</h1>
+        <p class="lead">Görselin içindeki sembolleri, kodları ve tarihsel referansları adım adım çözen interaktif index. Düzenle, ekle, yayımla.</p>
+      </div>
+    </header>
+
+    <main>
+      <nav class="card">
+        <h3>Index Başlıkları</h3>
+        <ul>
+          <li><a href="#overview" class="active">Genel Bakış</a></li>
+          <li><a href="#hex">Hex Kod & Çözüm</a></li>
+          <li><a href="#symbols">Semboller</a></li>
+          <li><a href="#history">Tarihsel Referanslar</a></li>
+          <li><a href="#manifesto">Manifesto / Metinler</a></li>
+          <li><a href="#download">İndir & Kaynak</a></li>
+        </ul>
+      </nav>
+
+      <section class="view" id="content">
+        <div class="meta">
+          <div class="tags">RUR1EL • Vox Obscura • Caprina</div>
+        </div>
+
+        <div id="overview" class="panel">
+          <h4>Genel Bakış</h4>
+          <p>Bu index, görselin üzerinde bulunan öğelerin (kafa, keman/ud, boynuz sembolleri, parşömenler, sikkeler, yazıtlar) her birini tanımlar ve anlamını açıklar. Sağ taraftaki nav üzerinden bölümlere atlayabilirsiniz.</p>
+        </div>
+
+        <div class="imagewrap">
+          <!-- kullanıcı bu resmi aynı klasöre koymalı: ruriel_image.png -->
+          <img id="hero" src="ruriel_image.png" alt="Ruriel Codex">
+        </div>
+
+🦈, [16.10.2025 18:35]
+<div id="hex" class="panel">
+          <h4>Hex Kod & Çözüm</h4>
+          <p>Görseldeki ana hex: <span class="code" id="hexVal">5265616C41726D7374726F6E67</span></p>
+          <p style="margin-top:8px;color:var(--muted)">Çözüm (UTF-8): <strong id="hexDecoded"></strong></p>
+          <p><button id="decodeBtn">Hex'i Çöz</button> <button id="copyBtn">Kopyala</button></p>
+        </div>
+
+        <div id="symbols" class="panel">
+          <h4>Semboller</h4>
+          <p>Burada: boynuzdaki runik çizimler (Fibonacci & Keldani işaretleri), göğüsteki parşömen yazıları, kemandaki simyasal sembol açıklamaları yer alacak.</p>
+        </div>
+
+        <div id="history" class="panel">
+          <h4>Tarihsel Referanslar</h4>
+          <p>İskenderiye Kütüphanesi, Piri Reis benzeri haritalar, İbn-i Sina referansları, Hitit sikkeleri ve Osmanlı divani alıntıları için kaynakça ve kısa açıklamalar bulunur.</p>
+        </div>
+
+        <div id="manifesto" class="panel">
+          <h4>Manifesto / Metinler</h4>
+          <p>"Scientia Vincere Tenebras" ve altındaki Osmanlı divani tercümesi yer alır. Buraya birer paragraf ekleyerek görsel için şiir/manifesto yazabilirsin.</p>
+        </div>
+
+        <div id="download" class="panel">
+          <h4>İndir & Kaynak</h4>
+          <p>Bu index'i statik bir dosya olarak indirmek için basitçe <code>File → Save As</code> yapabilir veya aşağıdaki komutla lokal server'da yayınlayabilirsin:</p>
+          <pre class="code">python3 -m http.server 8000</pre>
+          <p style="color:var(--muted);margin-top:8px">Tarayıcıda: <code>http://localhost:8000/</code></p>
+        </div>
+
+        <footer>Hazırlayan: Ruriel Codex Generator • Düzenle, kişiselleştir, yayımla.</footer>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Basit interaktiflik: hex çözme, nav scroll
+    document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',e=>{
+      e.preventDefault(); document.querySelectorAll('nav a').forEach(x=>x.classList.remove('active'));
+      a.classList.add('active'); document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth',block:'start'});
+    }));
+
+    function hexToUtf8(hex){
+      try{let s=''; for(let i=0;i<hex.length;i+=2) s+=String.fromCharCode(parseInt(hex.substr(i,2),16)); return s;}catch(e){return ''}
+    }
+
+    const hexVal = document.getElementById('hexVal').textContent.trim();
+    document.getElementById('decodeBtn').addEventListener('click',()=>{
+      document.getElementById('hexDecoded').textContent = hexToUtf8(hexVal) || '(çözülemedi)';
+    });
+    document.getElementById('copyBtn').addEventListener('click',()=>{
+      navigator.clipboard.writeText(hexVal).then(()=>alert('Kopyalandı: '+hexVal));
+    });
+
+    // Otomatik decode (sayfa açıldığında)
+    document.getElementById('hexDecoded').textContent = hexToUtf8(hexVal);
+  </script>
+</body>
+</html>
